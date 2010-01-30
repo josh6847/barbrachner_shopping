@@ -13,6 +13,10 @@ class SiteExtension < Spree::Extension
   # end
   
   def activate
+    AppConfiguration.class_eval do
+      preference :stylesheets, :string, :default => 'compiled/screen,site'
+      preference :logo, :string, :default => '/images/br_logo.png'
+    end
 
     # Add your extension tab to the admin.
     # Requires that you have defined an admin controller:
