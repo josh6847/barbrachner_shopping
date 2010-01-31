@@ -1,6 +1,7 @@
 config/database.yml
 log/*
 db/schema.rb
+config/deploy.rb
 ._*
 *.swp
 mkmf.log
