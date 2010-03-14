@@ -16,7 +16,7 @@ module Paperclip
     def self.from_file file
       file = file.path if file.respond_to? "path"
       geometry = begin
-                   Paperclip.run("/usr/local/bin/identify", %Q[-format "%wx%h" "#{file}"[0]])
+                   Paperclip.run("/usr/bin/identify", %Q[-format "%wx%h" "#{file}"[0]])
                  rescue PaperclipCommandLineError
                    ""
                  end
