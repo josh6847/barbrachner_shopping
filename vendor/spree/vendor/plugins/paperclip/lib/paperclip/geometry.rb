@@ -14,6 +14,7 @@ module Paperclip
     # Uses ImageMagick to determing the dimensions of a file, passed in as either a
     # File or path.
     def self.from_file file
+      debugger
       file = file.path if file.respond_to? "path"
       geometry = begin
                    Paperclip.run("/usr/bin/identify", %Q[-format "%wx%h" "#{file}"[0]])
