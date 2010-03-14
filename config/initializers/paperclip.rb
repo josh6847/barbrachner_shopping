@@ -2,8 +2,7 @@
 
 # generate errors when thumbnail generation fails (gets caught by spree's image validation)
 Paperclip.options[:whiny] = true
-Paperclip.options[:image_magick_path] = '/opt/local/bin'
-
+Paperclip.options[:command_path] = '/usr/local/bin/identify'
 
 # send (normal) log messages to the default rails logger 
 # Paperclip default is true, but we set this to false for Spree 
